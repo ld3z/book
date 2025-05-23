@@ -3,3 +3,9 @@ authors = ["ld3zian"]
 language = "en"
 src = "src"
 title = "ldez book"
+
+[preprocessor.admonish]
+command = "mdbook-admonish"
+
+[output.html]
+additional-css = ["./mdbook-admonish.css"]
