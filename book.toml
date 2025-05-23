@@ -6,6 +6,11 @@ title = "ldez book"
 
 [preprocessor.alerts]
 
+[preprocessor.embedify]
+
+[preprocessor.github-authors]
+command = "mdbook-github-authors"
+
 [preprocessor.admonish]
 command = "mdbook-admonish"
 

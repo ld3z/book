@@ -30,6 +30,14 @@ jobs:
         uses: taiki-e/cache-cargo-install-action@v2
         with:
           tool: mdbook-alerts
+      - name: Install mdbook-embedify
+        uses: taiki-e/cache-cargo-install-action@v2
+        with:
+          tool: mdbook-embedify
+      - name: Install mdbook-github-authors
+        uses: taiki-e/cache-cargo-install-action@v2
+        with:
+          tool: mdbook-github-authors
       - name: Build Book
         run: |
           # This assumes your book is in the root of your repository.
