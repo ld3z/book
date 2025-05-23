@@ -38,6 +38,10 @@ jobs:
         uses: taiki-e/cache-cargo-install-action@v2
         with:
           tool: mdbook-github-authors
+      - name: Install mdbook-reading-time
+        uses: taiki-e/cache-cargo-install-action@v2
+        with:
+          tool: mdbook-reading-time
       - name: Build Book
         run: |
           # This assumes your book is in the root of your repository.

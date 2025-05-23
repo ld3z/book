@@ -11,6 +11,8 @@ title = "ldez book"
 [preprocessor.github-authors]
 command = "mdbook-github-authors"
 
+[preprocessor.reading-time]
+
 [preprocessor.admonish]
 command = "mdbook-admonish"
 
