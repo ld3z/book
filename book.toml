@@ -4,6 +4,8 @@ language = "en"
 src = "src"
 title = "ldez book"
 
+[preprocessor.alerts]
+
 [preprocessor.admonish]
 command = "mdbook-admonish"
 
