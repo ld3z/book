@@ -7,6 +7,7 @@ title = "ldez book"
 [preprocessor.alerts]
 
 [preprocessor.embedify]
+scroll-to-top.enable = true
 
 [preprocessor.github-authors]
 command = "mdbook-github-authors"
