@@ -23,6 +23,10 @@ sudo sh install-docker.sh
 sudo usermod -aG docker (username)
 ```
 
+```admonish info
+This command adds your user to the docker group, effectively allowing you to run docker commands without ```sudo```
+```
+
 4. Then reboot
 ```sh
 sudo reboot
