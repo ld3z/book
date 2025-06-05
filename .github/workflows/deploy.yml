@@ -16,7 +16,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: Install mdbook
-        uses: taiki-e/cache-cargo-install-action@v2
+        uses: taiki-e/install-action@v2
         with:
           tool: mdbook
       - name: Install mdbook-admonish

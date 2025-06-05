@@ -9,7 +9,11 @@ So, I just decided to leave myself a note about installing it so that I could ju
 Going to [get docker](https://get.docker.com/) brings you to the web page that hosts the awesome script provided by docker and following the commands below will help make the process even more simple.
 
 1. Download the script:
-```curl -fsSL https://get.docker.com -o install-docker.sh```
+```sh
+curl -fsSL https://get.docker.com -o install-docker.sh
+```
 
 2. Then run the script:
-```sudo sh install-docker.sh```
+```sh
+sudo sh install-docker.sh
+```
