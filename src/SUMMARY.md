@@ -1,4 +1,4 @@
 # Summary
 
-- [Chapter 1](./chapter_1.md)
+- [Homepage](./homepage.md)
 - [Docker](./docker.md)
