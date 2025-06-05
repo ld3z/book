@@ -27,19 +27,19 @@ jobs:
         run: |
           mdbook-admonish install
       - name: Install mdbook-alerts
-        uses: taiki-e/cache-cargo-install-action@v2
+        uses: taiki-e/install-action@v2
         with:
           tool: mdbook-alerts
       - name: Install mdbook-embedify
-        uses: taiki-e/cache-cargo-install-action@v2
+        uses: taiki-e/install-action@v2
         with:
           tool: mdbook-embedify
       - name: Install mdbook-github-authors
-        uses: taiki-e/cache-cargo-install-action@v2
+        uses: taiki-e/install-action@v2
         with:
           tool: mdbook-github-authors
       - name: Install mdbook-reading-time
-        uses: taiki-e/cache-cargo-install-action@v2
+        uses: taiki-e/install-action@v2
         with:
           tool: mdbook-reading-time
       - name: Build Book
