@@ -17,3 +17,5 @@ curl -fsSL https://get.docker.com -o install-docker.sh
 ```sh
 sudo sh install-docker.sh
 ```
+
+{{#author ld3z}}
