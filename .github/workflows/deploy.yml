@@ -20,7 +20,7 @@ jobs:
         with:
           tool: mdbook
       - name: Install mdbook-admonish
-        uses: taiki-e/cache-cargo-install-action@v2
+        uses: taiki-e/install-action@v2
         with:
           tool: mdbook-admonish
       - name: Run mdbook-admonish install
