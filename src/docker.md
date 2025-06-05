@@ -18,4 +18,14 @@ curl -fsSL https://get.docker.com -o install-docker.sh
 sudo sh install-docker.sh
 ```
 
+3. Then run:
+```sh
+sudo usermod -aG docker (username)
+```
+
+4. Then reboot
+```sh
+sudo reboot
+```
+
 {{#author ld3z}}
