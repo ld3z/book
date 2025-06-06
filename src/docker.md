@@ -1,6 +1,6 @@
 # Docker
 
-I've been using docker a lot more, and because of that, I was installing it over and over again. I've also been setting up multiple machines lately which hasn't been all to nice having to remember how to install it.
+I've been using docker a lot more, and because of that, I was installing it over and over again. I've also been setting up multiple machines lately which hasn't been all too nice having to remember how to install it.
 
 So, I just decided to leave myself a note about installing it so that I could just copy and paste (1 click) and not have to worry about installing it.
 
