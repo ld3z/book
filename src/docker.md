@@ -25,7 +25,7 @@ If you understand the risks and still prefer the convenience script for your use
     sudo usermod -aG docker (username)
     ```
 
-    ```admonish tip
+    ```admonish warning
     Replace `(username)` with your actual username. This command adds your current user to the `docker` group. Membership in this group allows you to run Docker commands without needing `sudo`. While convenient, understand that members of the `docker` group have permissions equivalent to the root user regarding Docker, so exercise caution.
     ```
 
@@ -33,13 +33,19 @@ If you understand the risks and still prefer the convenience script for your use
     ```sh
     sudo reboot
     ```
+
+    ```admonish tip
     A reboot is usually required for the group changes made in the previous step to take effect.
+    ```
 
 5.  **Verify the installation:**
     After your system has restarted and you've logged back in, you can verify that Docker is installed and you can run commands without `sudo` by running the `hello-world` container:
     ```sh
     docker run hello-world
     ```
+
+    ```admonish info
     This command downloads a test image and runs it in a container. If everything is set up correctly, you should see a message confirming that your Docker installation is working.
+    ```
 
 {{#author ld3z}}
