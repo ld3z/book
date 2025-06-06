@@ -8,6 +8,8 @@ title = "ldez's Notes"
 
 [preprocessor.embedify]
 scroll-to-top.enable = true
+footer.enable = true
+footer.message = "Copyright © 2025 • Created with ❤️ by [ld3z](https://github.com/ld3z)"
 
 [preprocessor.github-authors]
 command = "mdbook-github-authors"
