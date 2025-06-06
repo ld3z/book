@@ -1,33 +1,40 @@
 # Docker
 
-I've been using docker a lot more, and because of that, I was installing it over and over again. I've also been setting up multiple machines lately which hasn't been all too nice having to remember how to install it.
+Docker is a platform used for developing, shipping, and running applications in containers. Installing it can sometimes involve several steps, and if you're setting up multiple machines or doing it frequently, remembering the exact process can be tedious.
 
-So, I just decided to leave myself a note about installing it so that I could just copy and paste (1 click) and not have to worry about installing it.
+This note serves as a quick reference for installing Docker using the convenience script provided by the Docker team. While this method is fast and easy for development or testing environments, be aware that piping scripts from the internet directly to your shell (`sh`) can pose security risks. For production environments, it is generally recommended to install Docker using your operating system's package manager (like `apt` on Debian/Ubuntu, `yum`/`dnf` on Fedora/CentOS/RHEL, etc.) as this integrates better with system updates and dependencies.
 
-Going to [get.docker.com](https://get.docker.com/) brings you to the web page that hosts the awesome script provided by the docker team and following the commands below will help make the process even more simple.
+If you understand the risks and still prefer the convenience script for your use case, follow these steps:
 
-1. Download the script:
-```sh
-curl -fsSL https://get.docker.com -o install-docker.sh
-```
+1.  **Download the script:**
+    ```sh
+    curl -fsSL https://get.docker.com -o install-docker.sh
+    ```
+    This command downloads the installation script from `get.docker.com` and saves it as `install-docker.sh`.
 
-2. Then run the script:
-```sh
-sudo sh install-docker.sh
-```
+2.  **Run the script:**
+    ```sh
+    sudo sh install-docker.sh
+    ```
+    This executes the downloaded script with superuser privileges to perform the installation.
 
-3. Then run:
-```sh
-sudo usermod -aG docker (username)
-```
+3.  **Add your user to the `docker` group:**
+    ```sh
+    sudo usermod -aG docker (username)
+    ```
+    Replace `(username)` with your actual username. This command adds your current user to the `docker` group. Membership in this group allows you to run Docker commands without needing `sudo`. While convenient, understand that members of the `docker` group have permissions equivalent to the root user regarding Docker, so exercise caution.
 
-```admonish info
-This command adds your user to the docker group, effectively allowing you to run docker commands without ```sudo```
-```
+4.  **Reboot your system:**
+    ```sh
+    sudo reboot
+    ```
+    A reboot is usually required for the group changes made in the previous step to take effect.
 
-4. Then reboot
-```sh
-sudo reboot
-```
+5.  **Verify the installation:**
+    After your system has restarted and you've logged back in, you can verify that Docker is installed and you can run commands without `sudo` by running the `hello-world` container:
+    ```sh
+    docker run hello-world
+    ```
+    This command downloads a test image and runs it in a container. If everything is set up correctly, you should see a message confirming that your Docker installation is working.
 
 {{#author ld3z}}
