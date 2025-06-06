@@ -2,7 +2,7 @@
 
 Docker is a platform used for developing, shipping, and running applications in containers. Installing it can sometimes involve several steps, and if you're setting up multiple machines or doing it frequently, remembering the exact process can be tedious.
 
-This note serves as a quick reference for installing Docker using the convenience script provided by the Docker team. While this method is fast and easy for development or testing environments, be aware that piping scripts from the internet directly to your shell (`sh`) can pose security risks. For production environments, it is generally recommended to install Docker using your operating system's package manager (like `apt` on Debian/Ubuntu, `yum`/`dnf` on Fedora/CentOS/RHEL, etc.) as this integrates better with system updates and dependencies.
+This note serves as a quick reference for installing Docker using the convenience script provided by the Docker team. While this method is fast and easy for development or testing environments, be aware that piping scripts from the internet directly to your shell (`sh`) can pose security risks.
 
 If you understand the risks and still prefer the convenience script for your use case, follow these steps:
 
@@ -10,19 +10,24 @@ If you understand the risks and still prefer the convenience script for your use
     ```sh
     curl -fsSL https://get.docker.com -o install-docker.sh
     ```
-    This command downloads the installation script from `get.docker.com` and saves it as `install-docker.sh`.
+    This command downloads the installation script from [get.docker.com](https://get.docker.com) and saves it as `install-docker.sh`.
 
 2.  **Run the script:**
     ```sh
     sudo sh install-docker.sh
     ```
-    This executes the downloaded script with superuser privileges to perform the installation.
 
+    ```admonish info
+    This executes the downloaded script with superuser privileges to perform the installation.
+    ```
 3.  **Add your user to the `docker` group:**
     ```sh
     sudo usermod -aG docker (username)
     ```
+
+    ```admonish tip
     Replace `(username)` with your actual username. This command adds your current user to the `docker` group. Membership in this group allows you to run Docker commands without needing `sudo`. While convenient, understand that members of the `docker` group have permissions equivalent to the root user regarding Docker, so exercise caution.
+    ```
 
 4.  **Reboot your system:**
     ```sh
