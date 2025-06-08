@@ -16,10 +16,6 @@ command = "mdbook-github-authors"
 
 [preprocessor.reading-time]
 
-[preprocessor.toc]
-command = "mdbook-toc"
-renderer = ["html"]
-
 [preprocessor.admonish]
 command = "mdbook-admonish"
 
