@@ -8,12 +8,6 @@ Can be installed by running:
 sudo apt-get install tmux
 ```
 
-Tmux has a [cheat sheet](https://tmuxcheatsheet.com) for most of it's commands but here are some common controls you may need:
+Tmux has a [cheat sheet](https://tmuxcheatsheet.com) for all of it's commands, I use this often and keep referring to it since it is so helpful.
 
-```sh
-tmux attach
-```
-
-```sh
-tmux or tmux new
-```
+{{#author ld3z}}
