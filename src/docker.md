@@ -45,5 +45,3 @@ This note serves as a quick reference for installing Docker using the convenienc
     ```admonish info
     This command downloads a test image and runs it in a container. If everything is set up correctly, you should see a message confirming that your Docker installation is working.
     ```
-
-{{#author ld3z}}

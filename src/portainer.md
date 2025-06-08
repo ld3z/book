@@ -16,12 +16,10 @@ sudo docker volume create portainer_data
 ```
 
 ```admonish info
-This creates a docker volume which Portainer's data will be
+This creates a docker volume which Portainer's data will be stored in
 ```
 
 Then to install the container you'll run:
 ```sh
 sudo docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:latest
 ```
-
-{{#author ld3z}}
