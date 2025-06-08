@@ -2,9 +2,7 @@
 
 Docker is a platform used for developing, shipping, and running applications in containers. Installing it can sometimes involve several steps, and if you're setting up multiple machines or doing it frequently, remembering the exact process can be tedious.
 
-This note serves as a quick reference for installing Docker using the convenience script provided by the Docker team. While this method is fast and easy for development or testing environments, be aware that piping scripts from the internet directly to your shell can pose security risks.
-
-If you understand the risks and still prefer the convenience script for your use case, follow these steps:
+This note serves as a quick reference for installing Docker using the convenience script provided by the Docker team.
 
 1.  **Download the script:**
     ```sh
