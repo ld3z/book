@@ -14,8 +14,6 @@ footer.message = "{{#author ld3z}}"
 [preprocessor.github-authors]
 command = "mdbook-github-authors"
 
-[preprocessor.reading-time]
-
 [preprocessor.admonish]
 command = "mdbook-admonish"
 
