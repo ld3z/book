@@ -46,3 +46,5 @@ Under Settings → App Templates in your Portainer GUI, paste this URL:
 ```sh
 https://raw.githubusercontent.com/Lissy93/portainer-templates/main/templates.json
 ```
+
+<!-- toc -->
