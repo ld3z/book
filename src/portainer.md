@@ -11,14 +11,14 @@ While Portainer is a popular choice, here are some alternatives you might consid
 
 Follow these steps to install the Portainer Community Edition:
 
-1.  **Create a Docker Volume:** This volume will store Portainer's persistent data.
+1.  **Create a Docker Volume:**
 
     ```sh
     sudo docker volume create portainer_data
     ```
 
     ```admonish info
-    This creates a docker volume which Portainer's data will be stored in
+    This volume will store Portainer's persistent data.
     ```
 
 2.  **Deploy the Portainer Container:** Run the following command to download and start the Portainer container.
@@ -27,7 +27,11 @@ Follow these steps to install the Portainer Community Edition:
     sudo docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:latest
     ```
 
-3.  **Create a Docker Network (Optional but recommended):** It's good practice to put your containers on a dedicated network. Replace `(name of network)` with your desired network name (e.g., `my-app-network`).
+3.  **Create a Docker Network (Optional but recommended):**
+
+    ```admonish tip
+    It's good practice to put your containers on a dedicated network. Replace `(name of network)` with your desired network name (e.g., `my-app-network`).
+    ```
 
     ```sh
     sudo docker network create (name of network)
