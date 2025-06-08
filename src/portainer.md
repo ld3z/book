@@ -7,7 +7,7 @@ While Portainer is a popular choice, here are some alternatives you might consid
 - [Rancher](https://www.rancher.com/) - More for Kubernetes (container orchestration)
 - [Dockage](https://github.com/louislam/dockge) - Portainer but made by the same people who made [UptimeKuma](https://github.com/louislam/uptime-kuma) mainly focuses on the `docker-compose.yml` side, but some users have found it more helpful than Portainer
 
-### Installation Steps
+## Installation Steps
 
 Follow these steps to install the Portainer Community Edition:
 
@@ -36,3 +36,13 @@ Follow these steps to install the Portainer Community Edition:
     ```sh
     sudo docker network create (name of network)
     ```
+
+### App Templates
+
+In Portainer, [App Templates](https://docs.portainer.io/user/docker/templates) enable you to easily deploy services with a predetermined configuration, while allowing you to customize options through the web UI. While Portainer ships with some default templates (see [portainer/templates](https://github.com/portainer/templates)), it’s often helpful to have 1-click access to many more apps + stacks, without having to constantly switch template sources.
+
+Under Settings → App Templates in your Portainer GUI, paste this URL:
+
+```sh
+https://raw.githubusercontent.com/Lissy93/portainer-templates/main/templates.json
+```

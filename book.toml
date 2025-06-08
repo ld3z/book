@@ -20,6 +20,7 @@ command = "mdbook-github-authors"
 command = "mdbook-admonish"
 
 [output.html]
-additional-css = ["./mdbook-admonish.css"]
+additional-css = ["./mdbook-admonish.css", "theme/pagetoc.css"]
+additional-js = ["theme/pagetoc.js"]
 git-repository-url = "https://github.com/ld3z/book"
 git-repository-icon = "fa-github"
