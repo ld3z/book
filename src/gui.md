@@ -4,7 +4,9 @@ This document provides commands to switch your system's default boot target betw
 
 Switching between these modes can be useful depending on whether you need a graphical environment or prefer working solely from the command line.
 
-Note: These commands are applicable for systems using `systemd`.
+```admonish note
+These commands are applicable for systems using `systemd`.
+```
 
 ## Disable GUI (Boot to Command Line):
 
