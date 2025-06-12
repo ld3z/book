@@ -4,4 +4,4 @@
 - [Docker](./docker.md)
   - [Helpful CMD Programs](./helpful-cmd.md)
   - [Portainer](./portainer.md)
-  - [GUI](./gui.md)
+  - [Enabling/Disabling GUI](./gui.md)
