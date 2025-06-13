@@ -12,7 +12,9 @@ Tmux has a [cheat sheet](https://tmuxcheatsheet.com) for all of it's commands, I
 
 ## Tldr
 
+```admonish info
 Shows commands of linux packages
+```
 
 There's a site version and a terminal version.
 
