@@ -22,8 +22,10 @@ To start a new Tmux session:
 tmux
 ```
 
+```admonish example
 To detach from a session (leaving it running in the background):
 Press `Ctrl+b` followed by `d`.
+```
 
 To list existing sessions:
 
