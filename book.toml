@@ -21,5 +21,5 @@ command = "mdbook-admonish"
 additional-css = ["./mdbook-admonish.css", "./theme/catppuccin.css", "./theme/catppuccin-admonish.css", "./theme/catppuccin-alerts.css"]
 git-repository-url = "https://github.com/ld3z/book"
 git-repository-icon = "fa-github"
-default-theme = "frappé"
-preferred-dark-theme = "frappé"
+default-theme = "frappe"
+preferred-dark-theme = "frappe"
