@@ -1,0 +1,28 @@
+[book]
+authors = ["ld3zian"]
+language = "en"
+src = "src"
+title = "ldez's Notes"
+
+[preprocessor.alerts]
+
+[preprocessor.embedify]
+scroll-to-top.enable = true
+footer.enable = true
+footer.message = "{{#author ld3z}}"
+
+[preprocessor.github-authors]
+command = "mdbook-github-authors"
+
+[preprocessor.admonish]
+command = "mdbook-admonish"
+
+[preprocessor.iconify]
+command = "python preprocessors/iconify/main.py"
+
+[output.html]
+additional-css = ["./theme/iconify.css", "./mdbook-admonish.css", "./theme/catppuccin.css", "./theme/catppuccin-admonish.css", "./theme/catppuccin-alerts.css"]
+git-repository-url = "https://github.com/ld3z/book"
+git-repository-icon = "fa-github"
+default-theme = "frappe"
+preferred-dark-theme = "frappe"
