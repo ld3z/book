@@ -8,11 +8,11 @@ def escape_attr(s):
     return html.escape(s, quote=True)
 
 def replace_tooltips(content):
-    # This regex finds [tooltip-(content here)] patterns
-    tooltip_pattern = re.compile(r'\[tooltip-\(([^)]+)\]')
+    # This regex finds [^tooltip:content] patterns
+    tooltip_pattern = re.compile(r'\[\^tooltip:([^\]]+)\]')
 
     def process_tooltip(match):
-        tooltip_content = match.group(1)
+        tooltip_content = match.group(1).strip()
         # Create a span with the info icon and tooltip content
         return (
             '<span class="tooltip-trigger" data-tippy-content="' + 
