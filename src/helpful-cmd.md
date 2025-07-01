@@ -4,7 +4,7 @@ This page lists some command-line tools that can significantly enhance your prod
 
 ## Tmux :simple-icons-tmux:
 
-Tmux (Terminal Multiplexer) allows you to create and control multiple terminal sessions within a single window. This is incredibly useful for keeping tasks organized, detaching from sessions without losing progress, and pair programming.
+Tmux ([Terminal Multiplexer]^(A tool that lets you switch between several programs in one terminal, detach them, and reattach them later.)) allows you to create and control multiple terminal sessions within a single window. This is incredibly useful for keeping tasks organized, detaching from sessions without losing progress, and pair programming.
 
 Can be installed by running:
 
