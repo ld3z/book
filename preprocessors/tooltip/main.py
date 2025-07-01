@@ -8,16 +8,17 @@ def escape_attr(s):
     return html.escape(s, quote=True)
 
 def replace_tooltips(content):
-    # This regex finds [text]^(content) patterns.
-    # Note: This simple version doesn't support parentheses '()' inside the tooltip content.
-    tooltip_pattern = re.compile(r'\[([^\]]+)\]\^\(([^)]+)\)')
+    # This regex finds [tooltip-(content here)] patterns
+    tooltip_pattern = re.compile(r'\[tooltip-\(([^)]+)\]')
 
     def process_tooltip(match):
-        text = match.group(1)
-        tooltip_content = match.group(2)
-
-        # We replace this with a span that our JavaScript can pick up.
-        return f'<span class="tooltip" data-tooltip-content="{escape_attr(tooltip_content)}">{text}</span>'
+        tooltip_content = match.group(1)
+        # Create a span with the info icon and tooltip content
+        return (
+            '<span class="tooltip-trigger" data-tippy-content="' + 
+            escape_attr(tooltip_content) + 
+            '"><i class="fa fa-info-circle" aria-hidden="true"></i></span>'
+        )
 
     return tooltip_pattern.sub(process_tooltip, content)
 
