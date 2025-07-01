@@ -47,6 +47,28 @@
         {{#each additional_css}}
         <link rel="stylesheet" href="{{ resource this }}">
         {{/each}}
+        
+        <!-- Tippy.js CSS -->
+        <link rel="stylesheet" href="https://unpkg.com/tippy.js@6.3.7/dist/tippy.css">
+        <style>
+            .tippy-box[data-theme~='light'] {
+                background-color: var(--sidebar-bg);
+                color: var(--sidebar-fg);
+                border: 1px solid var(--sidebar-active);
+            }
+            .tippy-box[data-theme~='light'][data-placement^='top'] > .tippy-arrow::before {
+                border-top-color: var(--sidebar-active);
+            }
+            .tippy-box[data-theme~='light'][data-placement^='bottom'] > .tippy-arrow::before {
+                border-bottom-color: var(--sidebar-active);
+            }
+            .tippy-box[data-theme~='light'][data-placement^='left'] > .tippy-arrow::before {
+                border-left-color: var(--sidebar-active);
+            }
+            .tippy-box[data-theme~='light'][data-placement^='right'] > .tippy-arrow::before {
+                border-right-color: var(--sidebar-active);
+            }
+        </style>
 
         {{#if mathjax_support}}
         <!-- MathJax -->
@@ -301,11 +323,33 @@
         <script src="{{ resource "highlight.js" }}"></script>
         <script src="{{ resource "book.js" }}"></script>
 
+        <!-- Tippy.js -->
+        <script src="https://unpkg.com/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+        <script src="https://unpkg.com/tippy.js@6.3.7/dist/tippy-bundle.umd.min.js"></script>
+        <link rel="stylesheet" href="https://unpkg.com/tippy.js@6.3.7/dist/tippy.css" />
+        
+        <!-- Initialize Tippy -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                // Initialize tooltips for elements with data-tippy-content
+                tippy('[data-tippy-content]', {
+                    theme: 'light',
+                    allowHTML: true,
+                    interactive: true,
+                    delay: [100, 0],
+                    animation: 'shift-away',
+                    placement: 'top',
+                    maxWidth: 350,
+                    appendTo: document.body
+                });
+            });
+        </script>
+
         <!-- Custom JS scripts -->
         {{#each additional_js}}
-        <script src="{{ resource this}}"></script>
+        <script src="{{ resource this }}" type="text/javascript" charset="utf-8"></script>
         {{/each}}
-
+        
         {{#if is_print}}
         {{#if mathjax_support}}
         <script>
