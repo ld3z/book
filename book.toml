@@ -20,9 +20,12 @@ command = "mdbook-admonish"
 [preprocessor.iconify]
 command = "python preprocessors/iconify/main.py"
 
+[preprocessor.tooltip]
+command = "python preprocessors/tooltip/main.py"
+
 [output.html]
-additional-css = ["./theme/iconify.css", "./mdbook-admonish.css", "./theme/catppuccin.css", "./theme/catppuccin-admonish.css", "./theme/catppuccin-alerts.css", ./theme/js/main.css]
-additional-js = ["./theme/js/main.js]
+additional-css = ["./theme/iconify.css", "./mdbook-admonish.css", "./theme/catppuccin.css", "./theme/catppuccin-admonish.css", "./theme/catppuccin-alerts.css", ./theme/main.css]
+additional-js = ["./theme/main.js]
 git-repository-url = "https://github.com/ld3z/book"
 git-repository-icon = "fa-github"
 default-theme = "frappe"
