@@ -49,7 +49,7 @@
         {{/each}}
         
         <!-- Tippy.js CSS -->
-        <link rel="stylesheet" href="https://unpkg.com/tippy.js@6.3.7/dist/tippy.css">
+        <link rel="stylesheet" href="{{ resource "tippy/tippy.css" }}">
         <style>
             /* Tippy.js tooltip styling */
             .tippy-box[data-theme~='light'] {
@@ -349,8 +349,8 @@
         <script src="{{ resource "book.js" }}"></script>
 
         <!-- Tippy.js -->
-        <script src="https://unpkg.com/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-        <script src="https://unpkg.com/tippy.js@6.3.7/dist/tippy-bundle.umd.min.js"></script>
+        <script src="{{ resource "popper/popper.min.js" }}"></script>
+        <script src="{{ resource "tippy/tippy-bundle.umd.min.js" }}"></script>
         <link rel="stylesheet" href="https://unpkg.com/tippy.js@6.3.7/dist/tippy.css" />
         
         <!-- Initialize Tippy -->

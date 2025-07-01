@@ -5,16 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "esbuild theme/js/main.js --bundle --outdir=theme --minify"
+    "postinstall": "node copy-deps.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@iconify/json": "^2.2.351",
     "@popperjs/core": "^2.11.8",
-    "floating-vue": "^5.2.2"
-  },
-  "devDependencies": {
-    "esbuild": "^0.25.5"
+    "tippy.js": "^6.3.7"
   }
 }
