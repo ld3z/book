@@ -56,9 +56,49 @@
                 color: var(--sidebar-fg);
                 border: 1px solid var(--sidebar-active);
                 font-size: 0.9em;
-                line-height: 1.4;
-                padding: 0.5em 0.8em;
+                line-height: 1.5;
+                padding: 0.8em 1em;
                 box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+                text-align: left;
+            }
+            
+            /* Markdown styles in tooltips */
+            .tippy-box[data-theme~='light'] h1,
+            .tippy-box[data-theme~='light'] h2,
+            .tippy-box[data-theme~='light'] h3 {
+                margin: 0.5em 0 0.3em 0;
+                font-size: 1.2em;
+                font-weight: bold;
+            }
+            
+            .tippy-box[data-theme~='light'] p {
+                margin: 0.5em 0;
+            }
+            
+            .tippy-box[data-theme~='light'] ul,
+            .tippy-box[data-theme~='light'] ol {
+                margin: 0.5em 0;
+                padding-left: 1.5em;
+            }
+            
+            .tippy-box[data-theme~='light'] li {
+                margin: 0.3em 0;
+            }
+            
+            .tippy-box[data-theme~='light'] code {
+                background-color: rgba(0, 0, 0, 0.1);
+                padding: 0.1em 0.3em;
+                border-radius: 3px;
+                font-family: var(--mono-font);
+                font-size: 0.9em;
+            }
+            
+            .tippy-box[data-theme~='light'] pre {
+                background-color: rgba(0, 0, 0, 0.1);
+                padding: 0.5em;
+                border-radius: 4px;
+                overflow: auto;
+                margin: 0.5em 0;
             }
             
             .tippy-box[data-theme~='light'][data-placement^='top'] > .tippy-arrow::before {
@@ -360,6 +400,7 @@
         <!-- Initialize Tippy -->
         <script>
             document.addEventListener('DOMContentLoaded', function() {
+                if (typeof tippy === 'function') {
                     // Initialize tooltips for elements with data-tippy-content
                     tippy('[data-tippy-content]', {
                         theme: 'light',
@@ -368,9 +409,19 @@
                         delay: [100, 0],
                         animation: 'shift-away',
                         placement: 'top',
-                        maxWidth: 350,
-                        appendTo: document.body
+                        maxWidth: 400,
+                        appendTo: document.body,
+                        arrow: true,
+                        content(reference) {
+                            const title = reference.getAttribute('title');
+                            reference.removeAttribute('title');
+                            return reference.getAttribute('data-tippy-content');
+                        }
                     });
+                    console.log('Tippy.js initialized successfully');
+                } else {
+                    console.error('Tippy.js not loaded');
+                }
             });
         </script>
 
