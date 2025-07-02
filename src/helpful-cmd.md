@@ -51,9 +51,7 @@ tmux attach -t 0
 Shows simplified examples for command-line tools.
 ```
 
-TLDR provides simplified, community-maintained examples for command-line programs. It cuts through lengthy man pages to give you just the common use cases.[^tooltip:There are two versions.
-- A site version
-- A terminal version]
+TLDR provides simplified, community-maintained examples for command-line programs. It cuts through lengthy man pages to give you just the common use cases.[^tooltip:# There are two versions.\n- A site version\n- A terminal version]
 
 Terminal can be installed by running:
 
