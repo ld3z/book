@@ -78,19 +78,27 @@
             .tooltip-trigger {
                 display: inline-flex;
                 align-items: center;
-                margin: 0 0.2em;
+                justify-content: center;
+                margin: 0 0.3em;
+                padding: 0.2em;
                 cursor: help;
                 color: var(--sidebar-active);
-                transition: color 0.2s ease;
+                transition: all 0.2s ease;
+                border-radius: 50%;
+                width: 1.2em;
+                height: 1.2em;
             }
             
             .tooltip-trigger:hover {
                 color: var(--sidebar-hover-bg);
+                background-color: rgba(0, 0, 0, 0.05);
+                transform: scale(1.1);
             }
             
             .tooltip-trigger .fa-info-circle {
-                font-size: 0.9em;
+                font-size: 1.1em;
                 vertical-align: middle;
+                line-height: 1;
             }
         </style>
 
