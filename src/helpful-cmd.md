@@ -53,15 +53,6 @@ Shows simplified examples for command-line tools.
 
 TLDR provides simplified, community-maintained examples for command-line programs. It cuts through lengthy man pages to give you just the common use cases.[^tooltip:@tldr-versions]
 
-Terminal can be installed by running:
-
-```sh
-sudo apt-get install tldr
-tldr -u # Update the cache after installation
-```
-
-The site can be found [here](https://tldr.inbrowser.app).
-
 **Basic Usage:**
 
 To see examples for the `tar` command:
@@ -78,9 +69,7 @@ tldr ls --platform osx
 
 ## htop :simple-icons-htop:
 
-```admonish info
-htop is an interactive process viewer for Unix-like systems. It provides a dynamic real-time view of processes running on the system, showing CPU usage, memory usage, swap usage, and tasks. It's an improved version of the standard `top` command with a more user-friendly interface.
-```
+htop is an interactive process viewer for Unix-like systems. It provides a dynamic real-time view of processes running on the system, showing CPU usage, memory usage, swap usage, and tasks.[^tooltip:It's an improved version of the standard `top` command with a more user-friendly interface.]
 
 Can be installed by running:
 
