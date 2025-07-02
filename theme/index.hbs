@@ -349,24 +349,23 @@
         <script src="{{ resource "book.js" }}"></script>
 
         <!-- Tippy.js -->
-        <script src="{{ resource "popper/popper.min.js" }}"></script>
-        <script src="{{ resource "tippy/tippy-bundle.umd.min.js" }}"></script>
-        <link rel="stylesheet" href="https://unpkg.com/tippy.js@6.3.7/dist/tippy.css" />
+        <script src="{{ resource \"popper/popper.min.js\" }}"></script>
+        <script src="{{ resource \"tippy/tippy-bundle.umd.min.js\" }}"></script>
         
         <!-- Initialize Tippy -->
         <script>
             document.addEventListener('DOMContentLoaded', function() {
-                // Initialize tooltips for elements with data-tippy-content
-                tippy('[data-tippy-content]', {
-                    theme: 'light',
-                    allowHTML: true,
-                    interactive: true,
-                    delay: [100, 0],
-                    animation: 'shift-away',
-                    placement: 'top',
-                    maxWidth: 350,
-                    appendTo: document.body
-                });
+                    // Initialize tooltips for elements with data-tippy-content
+                    tippy('[data-tippy-content]', {
+                        theme: 'light',
+                        allowHTML: true,
+                        interactive: true,
+                        delay: [100, 0],
+                        animation: 'shift-away',
+                        placement: 'top',
+                        maxWidth: 350,
+                        appendTo: document.body
+                    });
             });
         </script>
 
