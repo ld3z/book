@@ -23,5 +23,5 @@ Enabling both of those options should protect your server from unauthorized visi
 ## Useful Links:
 - [Container wiki](https://docker-minecraft-server.readthedocs.io/) :twemoji-glowing-star:
 - [Paper-chan's Paper Optimizations](https://paper-chan.moe/paper-optimization/) :twemoji-glowing-star: [^tooltip:@paperchan]
-- [YouHaveTrouble's Optimizations](https://github.com/YouHaveTrouble/minecraft-optimization) :twemoji-glowing-star:
+- [YouHaveTrouble's Optimizations](https://github.com/YouHaveTrouble/minecraft-optimization) :twemoji-glowing-star: [^tooltip:@youhavetrouble]
 - [Paper](https://papermc.io)
