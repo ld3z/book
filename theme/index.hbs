@@ -413,17 +413,8 @@
                         appendTo: document.body,
                         arrow: true,
                         content(reference) {
-                            const content = reference.getAttribute('data-tippy-content');
-                            // The content is already HTML-escaped, so we set it directly
-                            return content;
-                        },
-                        onMount(instance) {
-                            // Make sure any links in the tooltip open in a new tab
-                            const links = instance.popper.querySelectorAll('a');
-                            links.forEach(link => {
-                                link.setAttribute('target', '_blank');
-                                link.setAttribute('rel', 'noopener noreferrer');
-                            });
+                            // The content is already properly formatted HTML
+                            return reference.getAttribute('data-tippy-content');
                         }
                     });
                     console.log('Tippy.js initialized successfully');
