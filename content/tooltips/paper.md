@@ -1,6 +1,5 @@
 # Paper:
 
-- The go-to for MC server software
-- Updated for latest version of Minecraft
+- The goto for MC server software
+- Almost always updated for latest version of Minecraft
 - Very well optimized version of vanilla Minecraft
-- Fixes lots of game bugs and patches them out
