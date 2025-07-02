@@ -12,29 +12,27 @@ def escape_attr(s):
 
 def convert_markdown_to_html(md_content):
     """Convert markdown content to HTML."""
-    # First, convert markdown to HTML
+    # Convert markdown to HTML
     html_content = markdown.markdown(
         md_content,
-        extensions=['extra', 'nl2br', 'tables', 'fenced_code', 'codehilite'],
+        extensions=['extra', 'nl2br', 'fenced_code'],
         output_format='html5'
     )
     
     # Process links to add target and rel attributes
     import re
-    link_pattern = re.compile(r'<a\s+(?:[^>]*?\s+)?href=["\'](.*?)["\'](?:[^>]*)>(.*?)</a>', re.DOTALL)
     
     def process_link(match):
         url = match.group(1)
         text = match.group(2)
-        # Ensure URL is properly quoted
-        url = html.escape(url, quote=True)
-        return f'<a href=\"{url}\" target=\"_blank\" rel=\"noopener noreferrer\">{text}</a>'
+        return f'<a href="{url}" target="_blank" rel="noopener noreferrer">{text}</a>'
     
     # Process all links in the content
+    link_pattern = re.compile(r'<a\s+(?:[^>]*?\s+)?href=["\'](.*?)["\'](?:[^>]*)>(.*?)</a>', re.DOTALL)
     html_content = link_pattern.sub(process_link, html_content)
     
-    # Wrap in a div for consistent styling
-    return f'<div class="tooltip-content">{html_content}</div>'
+    # Return the HTML content
+    return html_content
 
 def load_tooltip_content(tooltip_ref):
     # Check if the reference is a file path (starts with @)
@@ -61,10 +59,10 @@ def replace_tooltips(content, file_path=None):
         # Load the tooltip content (either direct content or from file)
         tooltip_content = load_tooltip_content(tooltip_ref)
         
-        # Create a span with the info icon and tooltip content
-        # The content is already converted to HTML by load_tooltip_content
-        escaped_content = tooltip_content.replace('"', '&quot;')
+        # Escape the content for HTML attributes
+        escaped_content = html.escape(tooltip_content, quote=True)
         
+        # Create the tooltip trigger with the escaped content
         return (
             '<span class="tooltip-trigger" data-tippy-content="' + 
             escaped_content + 

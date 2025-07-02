@@ -456,8 +456,11 @@
                         content(reference) {
                             // Get the HTML content from the data attribute
                             const content = reference.getAttribute('data-tippy-content');
-                            // Return the content as HTML
-                            return content;
+                            // Create a temporary element to decode HTML entities
+                            const temp = document.createElement('div');
+                            temp.innerHTML = content;
+                            // Return the decoded content
+                            return temp.textContent;
                         }
                     });
                     console.log('Tippy.js initialized successfully');
