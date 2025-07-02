@@ -13,7 +13,11 @@ def escape_attr(s):
 def convert_markdown_to_html(md_content):
     """Convert markdown content to HTML."""
     # First, convert markdown to HTML
-    html_content = markdown.markdown(md_content, extensions=['extra', 'nl2br'])
+    html_content = markdown.markdown(
+        md_content,
+        extensions=['extra', 'nl2br', 'tables', 'fenced_code', 'codehilite'],
+        output_format='html5'
+    )
     
     # Process links to add target and rel attributes
     import re
@@ -24,10 +28,13 @@ def convert_markdown_to_html(md_content):
         text = match.group(2)
         # Ensure URL is properly quoted
         url = html.escape(url, quote=True)
-        return f'<a href="{url}" target="_blank" rel="noopener noreferrer">{text}</a>'
+        return f'<a href=\"{url}\" target=\"_blank\" rel=\"noopener noreferrer\">{text}</a>'
     
     # Process all links in the content
-    return link_pattern.sub(process_link, html_content)
+    html_content = link_pattern.sub(process_link, html_content)
+    
+    # Wrap in a div for consistent styling
+    return f'<div class="tooltip-content">{html_content}</div>'
 
 def load_tooltip_content(tooltip_ref):
     # Check if the reference is a file path (starts with @)
@@ -55,10 +62,12 @@ def replace_tooltips(content, file_path=None):
         tooltip_content = load_tooltip_content(tooltip_ref)
         
         # Create a span with the info icon and tooltip content
-        # Note: We're not escaping the content here as it's already HTML
+        # The content is already converted to HTML by load_tooltip_content
+        escaped_content = tooltip_content.replace('"', '&quot;')
+        
         return (
             '<span class="tooltip-trigger" data-tippy-content="' + 
-            tooltip_content.replace('"', '&quot;') + 
+            escaped_content + 
             '"><i class="fa fa-info-circle" aria-hidden="true"></i></span>'
         )
 

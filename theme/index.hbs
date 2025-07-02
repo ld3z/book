@@ -60,6 +60,47 @@
                 padding: 0.8em 1em;
                 box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
                 text-align: left;
+                max-width: 400px;
+            }
+            
+            .tooltip-content {
+                text-align: left;
+            }
+            
+            .tooltip-content h1, 
+            .tooltip-content h2, 
+            .tooltip-content h3, 
+            .tooltip-content h4 {
+                margin: 0.5em 0;
+                font-size: 1.1em;
+                font-weight: bold;
+            }
+            
+            .tooltip-content p {
+                margin: 0.5em 0;
+            }
+            
+            .tooltip-content ul, 
+            .tooltip-content ol {
+                margin: 0.5em 0;
+                padding-left: 1.5em;
+            }
+            
+            .tooltip-content li {
+                margin: 0.3em 0;
+            }
+            
+            .tooltip-content code {
+                background-color: rgba(0, 0, 0, 0.1);
+                padding: 0.1em 0.3em;
+                border-radius: 3px;
+                font-family: var(--mono-font);
+                font-size: 0.9em;
+            }
+            
+            .tooltip-content a {
+                color: var(--sidebar-active);
+                text-decoration: underline;
             }
             
             /* Markdown styles in tooltips */
@@ -415,11 +456,8 @@
                         content(reference) {
                             // Get the HTML content from the data attribute
                             const content = reference.getAttribute('data-tippy-content');
-                            // Create a temporary div to parse the HTML
-                            const temp = document.createElement('div');
-                            temp.innerHTML = content;
-                            // Return the parsed HTML
-                            return temp.innerHTML;
+                            // Return the content as HTML
+                            return content;
                         }
                     });
                     console.log('Tippy.js initialized successfully');
