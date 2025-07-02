@@ -3,11 +3,19 @@ import json
 import re
 import os
 import html
+import markdown
 from pathlib import Path
 
 def escape_attr(s):
     """Escape string for use in an HTML attribute."""
     return html.escape(s, quote=True)
+
+def convert_markdown_to_html(md_content):
+    """Convert markdown content to HTML."""
+    # Convert markdown to HTML
+    html_content = markdown.markdown(md_content, extensions=['extra', 'nl2br'])
+    # Remove any newlines to prevent issues with HTML attributes
+    return html_content.replace('"', '&quot;').replace('\n', ' ').strip()
 
 def load_tooltip_content(tooltip_ref):
     # Check if the reference is a file path (starts with @)
@@ -19,9 +27,11 @@ def load_tooltip_content(tooltip_ref):
         
         if tooltip_file.exists():
             with open(tooltip_file, 'r', encoding='utf-8') as f:
-                return f.read().strip()
+                content = f.read().strip()
+                return convert_markdown_to_html(content)
         return f"[Tooltip not found: {file_path}]"
-    return tooltip_ref
+    # If it's direct content, convert markdown to HTML
+    return convert_markdown_to_html(tooltip_ref)
 
 def replace_tooltips(content, file_path=None):
     # This regex finds [^tooltip:content] patterns
