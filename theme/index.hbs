@@ -413,8 +413,13 @@
                         appendTo: document.body,
                         arrow: true,
                         content(reference) {
-                            // The content is already properly formatted HTML
-                            return reference.getAttribute('data-tippy-content');
+                            // Get the HTML content from the data attribute
+                            const content = reference.getAttribute('data-tippy-content');
+                            // Create a temporary div to parse the HTML
+                            const temp = document.createElement('div');
+                            temp.innerHTML = content;
+                            // Return the parsed HTML
+                            return temp.innerHTML;
                         }
                     });
                     console.log('Tippy.js initialized successfully');

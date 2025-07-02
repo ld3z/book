@@ -15,42 +15,19 @@ def convert_markdown_to_html(md_content):
     # First, convert markdown to HTML
     html_content = markdown.markdown(md_content, extensions=['extra', 'nl2br'])
     
-    # Fix links to ensure they're not double-escaped
+    # Process links to add target and rel attributes
     import re
+    link_pattern = re.compile(r'<a\s+(?:[^>]*?\s+)?href=["\'](.*?)["\'](?:[^>]*)>(.*?)</a>', re.DOTALL)
     
-    # This pattern matches <a> tags and captures their href and content
-    link_pattern = re.compile(r'<a\s+(?:[^>]*?\s+)?href=["\'](.*?)["\'](?:[^>]*)>([^<]*)</a>')
-    
-    def fix_link(match):
+    def process_link(match):
         url = match.group(1)
         text = match.group(2)
-        # Only fix if the URL is not already HTML-escaped
-        if '&quot;' not in url and '&amp;' not in url:
-            url = html.escape(url, quote=True)
+        # Ensure URL is properly quoted
+        url = html.escape(url, quote=True)
         return f'<a href="{url}" target="_blank" rel="noopener noreferrer">{text}</a>'
     
     # Process all links in the content
-    html_content = link_pattern.sub(fix_link, html_content)
-    
-    # Escape the remaining HTML content, but preserve the already processed links
-    # We'll do this by temporarily replacing the links with placeholders
-    links = []
-    def store_link(match):
-        links.append(match.group(0))
-        return f'__LINK_{len(links)-1}__'
-    
-    # Store all links
-    html_content = link_pattern.sub(store_link, html_content)
-    
-    # Escape the rest of the HTML
-    html_content = html.escape(html_content)
-    
-    # Put the links back
-    for i, link in enumerate(links):
-        html_content = html_content.replace(f'__LINK_{i}__', link)
-    
-    # Replace newlines with spaces and strip whitespace
-    return html_content.replace('\n', ' ').strip()
+    return link_pattern.sub(process_link, html_content)
 
 def load_tooltip_content(tooltip_ref):
     # Check if the reference is a file path (starts with @)
@@ -77,13 +54,11 @@ def replace_tooltips(content, file_path=None):
         # Load the tooltip content (either direct content or from file)
         tooltip_content = load_tooltip_content(tooltip_ref)
         
-        # Escape HTML entities for the data attribute
-        escaped_content = escape_attr(tooltip_content)
-        
         # Create a span with the info icon and tooltip content
+        # Note: We're not escaping the content here as it's already HTML
         return (
             '<span class="tooltip-trigger" data-tippy-content="' + 
-            escaped_content + 
+            tooltip_content.replace('"', '&quot;') + 
             '"><i class="fa fa-info-circle" aria-hidden="true"></i></span>'
         )
 
