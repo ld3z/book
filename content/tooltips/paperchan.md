@@ -1,4 +1,4 @@
-# Paper-Chan's Optimizations
+# Paper-Chan's Optimizations:
 
 - Updated to latest version
 - Easy to follow

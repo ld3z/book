@@ -1,4 +1,4 @@
-# TLDR Versions
+# TLDR Versions:
 
 There are two main versions of TLDR:
 
