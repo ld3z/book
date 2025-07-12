@@ -19,9 +19,15 @@ Once Scoop is installed, you can use it to install and manage software packages.
 scoop install git
 ```
 
+Some packages are available in the default bucket, but you can also add additional buckets to install more packages. To add a bucket, run the following command:
+
+```powershell
+scoop bucket add [extras](bucket name here)
+```
+
 ## Updating
 
-To update Scoop and all installed packages, run the following command:
+To update Scoop and all installed buckets, run the following command:
 
 ```powershell
 scoop update
