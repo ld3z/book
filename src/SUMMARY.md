@@ -1,6 +1,7 @@
 # Summary
 
 - [Homepage](./homepage.md)
+- [Scoop](./scoop.md)
 
 # Linux
 

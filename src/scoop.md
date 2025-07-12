@@ -1,0 +1,41 @@
+# Scoop
+
+Is a package manager for Windows that allows you to install and manage software packages easily. It is designed to be simple and intuitive, making it easy for users of all skill levels to use.
+
+## Installation
+
+To install Scoop, open a PowerShell window as an administrator and run the following command:
+
+```powershell
+iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
+```
+
+## Usage
+
+Once Scoop is installed, you can use it to install and manage software packages. For example, to install Git, run the following command:
+
+```powershell
+scoop install git
+```
+
+## Updating
+
+To update Scoop and all installed packages, run the following command:
+
+```powershell
+scoop update
+```
+
+To update the packages themselves, run the following command:
+
+```powershell
+scoop update -a
+```
+
+## Uninstalling
+
+To uninstall Scoop, run the following command:
+
+```powershell
+scoop uninstall scoop
+```
