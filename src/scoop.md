@@ -7,7 +7,8 @@ Is a package manager for Windows that allows you to install and manage software 
 To install Scoop, open a PowerShell window as an administrator and run the following command:
 
 ```powershell
-iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
 ```
 
 ## Usage
