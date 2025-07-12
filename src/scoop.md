@@ -1,6 +1,6 @@
 # Scoop
 
-Is a package manager for Windows that allows you to install and manage software packages easily. It is designed to be simple and intuitive, making it easy for users of all skill levels to use.
+Is a package manager for Windows that allows you to install and manage software packages easily. It is designed to be simple and intuitive, making it easy for users of all skill levels to use. Which is probably why I prefer it over Chocolatey.
 
 ## Installation
 
