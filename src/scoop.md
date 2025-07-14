@@ -22,7 +22,7 @@ scoop install git
 Some packages are available in the default bucket, but you can also add additional buckets to install more packages. To add a bucket, run the following command:
 
 ```powershell
-scoop bucket add [extras](bucket name here)
+scoop bucket add [extras](or other bucket name here)
 ```
 
 ## Updating
@@ -47,4 +47,4 @@ To uninstall Scoop, run the following command:
 scoop uninstall scoop
 ```
 
-This will let you know what's going to happen and ask if you're sure—just type ```y``` and press enter to confirm. [^tooltip:This will delete the ```~/scoop/persist``` folder.]
+This will let you know what's going to happen and ask if you're sure—just type ```y``` and press enter to confirm.[^tooltip:This will delete the ```~/scoop/persist``` folder.]
