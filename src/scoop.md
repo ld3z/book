@@ -47,6 +47,4 @@ To uninstall Scoop, run the following command:
 scoop uninstall scoop
 ```
 
-This will let you know what's going to happen and ask if you're sure—just type 'y' and press enter to confirm.
-
-This command will delete the ```~/scoop/persist``` folder.
+This will let you know what's going to happen and ask if you're sure—just type ```y``` and press enter to confirm. [^tooltip:This will delete the ```~/scoop/persist``` folder.]
