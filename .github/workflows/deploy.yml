@@ -15,12 +15,16 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
+          cache: pnpm
       - name: Install npm dependencies
-        run: npm install
+        run: pnpm install
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
@@ -30,7 +34,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install markdown
       - name: Build tooltips
-        run: npm run postinstall
+        run: pnpm run postinstall
       - name: Install mdbook
         uses: taiki-e/install-action@v2
         with:
