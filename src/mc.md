@@ -21,7 +21,7 @@ There are somethings that you should utilize, regardless of server software. Lik
 Enabling both of those options should protect your server from unauthorized visitors.
 
 ## Useful Links:
-- [Container wiki](https://docker-minecraft-server.readthedocs.io/) :twemoji-glowing-star: [^tooltip:@mccontainer]
+- [itzg docker-minecraft-server wiki](https://docker-minecraft-server.readthedocs.io/) :twemoji-glowing-star: [^tooltip:@mccontainer]
 - [Paper-chan's Paper Optimizations](https://paper-chan.moe/paper-optimization/) :twemoji-glowing-star: [^tooltip:@paperchan]
 - [YouHaveTrouble's Optimizations](https://github.com/YouHaveTrouble/minecraft-optimization) :twemoji-glowing-star: [^tooltip:@youhavetrouble]
 - [Paper](https://papermc.io/downloads/paper) [^tooltip:@paper]
