@@ -38,7 +38,7 @@ jobs:
       - name: Install mdbook
         uses: taiki-e/install-action@v2
         with:
-          tool: mdbook
+          tool: mdbook@0.4.52
       - name: Install mdbook-admonish
         uses: taiki-e/install-action@v2
         with:
