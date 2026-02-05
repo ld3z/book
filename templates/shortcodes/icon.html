@@ -1,0 +1,12 @@
+{%- set is_colored = colored | default(value=false) -%}
+{%- if not is_colored and name is starting_with("twemoji:") or name is starting_with("noto:") or name is
+starting_with("logos:") or name is starting_with("emojione:") or name is starting_with("skill-icons:") -%}
+{%- set is_colored = true -%}
+{%- endif -%}
+
+{%- if is_colored -%}
+<i class="icon iconify-icon colored" style="background-image: var(--icon-{{ name | replace(from=':', to='-') }});"></i>
+{%- else -%}
+<i class="icon iconify-icon"
+    style="mask-image: var(--icon-{{ name | replace(from=':', to='-') }}); -webkit-mask-image: var(--icon-{{ name | replace(from=':', to='-') }});"></i>
+{%- endif -%}

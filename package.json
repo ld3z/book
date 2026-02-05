@@ -1,0 +1,10 @@
+{
+  "name": "book",
+  "private": true,
+  "scripts": {
+    "icons": "node scripts/generate-icons.js"
+  },
+  "devDependencies": {
+    "@iconify/json": "^2.2.435"
+  }
+}

@@ -5,12 +5,12 @@ title = "Portainer"
 go_to_top = true
 +++
 
-Portainer is a lightweight management UI for Docker, Kubernetes, Docker Swarm, and Azure ACI. It allows you to manage your containers, images, networks, and volumes from a web browser. This page provides instructions for installing the Portainer Community Edition (CE).
+Portainer is a lightweight management UI for Docker {{ icon(name="skill-icons:docker") }}, Kubernetes {{ icon(name="skill-icons:kubernetes") }}, Docker Swarm, and Azure ACI {{ icon(name="mdi:microsoft-azure") }}. It allows you to manage your containers, images, networks, and volumes from a web browser. This page provides instructions for installing the Portainer Community Edition (CE).
 
 While Portainer is a popular choice, here are some alternatives you might consider:
 
-- [Rancher](https://www.rancher.com/) - More for Kubernetes (container orchestration)
-- [Dockage](https://github.com/louislam/dockge) - Portainer but made by the same people who made [Uptime Kuma](https://github.com/louislam/uptime-kuma) mainly focuses on the `docker-compose.yml` side, but some users have found it more helpful than Portainer
+- [Rancher {{ icon(name="simple-icons:rancher") }}](https://www.rancher.com/) - More for Kubernetes (container orchestration)
+- [Dockage](https://github.com/louislam/dockge) - Portainer but made by the same people who made [Uptime Kuma {{ icon(name="simple-icons:uptimekuma") }}](https://github.com/louislam/uptime-kuma) mainly focuses on the `docker-compose.yml` side, but some users have found it more helpful than Portainer
 
 ## Installation Steps
 
@@ -40,7 +40,7 @@ Follow these steps to install the Portainer Community Edition:
     sudo docker network create (name of network)
     ```
 
-### App Templates:
+### App Templates {{ icon(name="material-symbols:touch-app") }}
 
 In Portainer, [App Templates](https://docs.portainer.io/user/docker/templates) enable you to easily deploy services with a predetermined configuration, while allowing you to customize options through the web UI. While Portainer ships with some default templates (see [portainer/templates](https://github.com/portainer/templates)), it’s often helpful to have 1-click access to many more apps + stacks, without having to constantly switch template sources.
 

@@ -40,6 +40,8 @@ favicon = "/favicon.png"
 toc = true
 toc_inline = true
 
+styles = ["iconify.css"]
+
 [extra.nav]
 # Whether to show the Atom/RSS feed button in the nav
 show_feed = true
