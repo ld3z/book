@@ -1,6 +1,6 @@
 @use "iconify-icons";
 
-.iconify-icon {
+i.iconify-icon {
     mask-repeat: no-repeat;
     -webkit-mask-repeat: no-repeat;
     mask-position: center;
@@ -8,6 +8,8 @@
     mask-size: contain;
     -webkit-mask-size: contain;
     vertical-align: -0.125em;
+    width: 1em;
+    height: 1em;
 
     &.colored {
         mask-image: none;
