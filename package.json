@@ -2,7 +2,8 @@
   "name": "book",
   "private": true,
   "scripts": {
-    "icons": "node scripts/generate-icons.js"
+    "icons": "node scripts/generate-icons.js",
+    "serve": "node scripts/generate-icons.js && zola serve"
   },
   "devDependencies": {
     "@iconify/json": "^2.2.435"

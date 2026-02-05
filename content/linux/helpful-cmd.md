@@ -7,7 +7,7 @@ go_to_top = true
 
 This page lists some command-line tools that can significantly enhance your productivity and make working in the terminal easier and more efficient.
 
-## Tmux:
+## Tmux {{ icon(name="simple-icons:tmux") }}
 
 Tmux (Terminal Multiplexer)[^tmux] allows you to create and control multiple terminal sessions within a single window.
 
@@ -49,7 +49,7 @@ To reattach to a specific session (replace `0` with the session number):
 tmux attach -t 0
 ```
 
-## TLDR:
+## TLDR {{ icon(name="simple-icons:tldraw") }}
 
 >[!NOTE]
 > Shows simplified examples for command-line tools.
@@ -70,7 +70,7 @@ To see examples for the `ls` command with macOS options:
 tldr ls --platform osx
 ```
 
-## htop:
+## htop {{ icon(name="simple-icons:htop") }}
 
 htop is an interactive process viewer for Unix-like systems. It provides a dynamic real-time view of processes running on the system, showing CPU usage, memory usage, swap usage, and tasks.[^htop]
 
