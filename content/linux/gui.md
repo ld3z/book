@@ -1,12 +1,16 @@
-# Managing the Graphical User Interface (GUI)
++++
+insert_anchor_links = "left"
+title = "Managing the Graphical User Interface (GUI)"
+[extra]
+go_to_top = true
++++
 
 This document provides commands to switch your system's default boot target between the graphical user interface (GUI) mode and the command-line interface (CLI) mode.
 
 Switching between these modes can be useful depending on whether you need a graphical environment or prefer working solely from the command line.
 
-```admonish note
-These commands are applicable for systems using `systemd`.
-```
+> [!NOTE]
+> These commands are applicable for systems using `systemd`.
 
 ## Disable GUI (Boot to Command Line):
 

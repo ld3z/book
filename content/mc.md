@@ -1,4 +1,9 @@
-# Minecraft Servers in Docker
++++
+insert_anchor_links = "left"
+title = "Minecraft Servers in Docker"
+[extra]
+go_to_top = true
++++
 
 I use [itzg/docker-minecraft-server](https://github.com/itzg/docker-minecraft-server) containers whenever possible since they are easy to maintain and run.
 
@@ -15,7 +20,7 @@ docker exec -i mc_server rcon-cli
 > [!NOTE]
 > This command's ```mc_server``` is a placeholder for whatever you called your container name in your compose file
 
-## Some things to keep in mind
+### Some things to keep in mind
 
 There are somethings that you should utilize, regardless of server software. Like online-mode or creating a whitelist.
 Enabling both of those options should protect your server from unauthorized visitors.
