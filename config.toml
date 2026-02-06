@@ -11,6 +11,8 @@ feed_filenames = ["rss.xml", "atom.xml"]
 build_search_index = true
 author = "ld3z"
 
+taxonomies = [{ name = "tags", feed = true }]
+
 theme = "duckquill"
 
 [markdown]
@@ -54,8 +56,10 @@ show_repo = true
 # i.e. "@/blog/_index.md".
 # See https://www.getzola.org/documentation/content/linking/#internal-links
 links = [
-	{ url = "@/scoop.md", name = "Scoop" },
-    { url = "@/chest-shop.md", name = "ChestShop Guide" },
+	    { name = "Pages", menu = [
+        { url = "@/scoop.md", name = "Scoop" },
+        { url = "@/chest-shop.md", name = "ChestShop Guide" },
+    ] },
     { name = "Linux", menu = [
         { url = "@/linux/helpful-cmd.md", name = "Helpful Commands" },
         { url = "@/linux/gui.md", name = "Enable/Disable GUI in Linux" },
@@ -64,8 +68,8 @@ links = [
         { url = "@/docker/_index.md", name = "Docker" },
         { url = "@/mc.md", name = "Minecraft" },
         { url = "@/portainer.md", name = "Portainer" }
-    ] }
-#	{ url = "https://daudix.one/coffee/", name = "Coffee" }
+    ] },
+	{ url = "@/blog/_index.md", name = "Blog" }
 ]
 
 [extra.footer]
